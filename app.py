@@ -8,7 +8,6 @@ from io import BytesIO
 import base64  # For encoding PDF to base64
 
 # Configure the API key
-os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Function to load Gemini model and get responses
@@ -59,7 +58,7 @@ def embed_pdf_in_sidebar(file_path):
 st.set_page_config(page_title="Invoice Extractor", layout="wide")
 
 # Sidebar for example files
-st.sidebar.title("Test the App")
+st.sidebar.title("Invoice Examples")
 st.sidebar.write("Use the example files below to test the app.")
 
 # Example files
